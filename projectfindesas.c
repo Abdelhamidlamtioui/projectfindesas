@@ -18,6 +18,7 @@ toDOList tab[100];
 
 int countAddElement=0;
 int searchID,countSearch,searchListChoice;
+int id_G=0;
 
 
 
@@ -94,8 +95,7 @@ void date(int count)
 };
 
 void addinfo()
-{
-  int id_G=0;            
+{            
   id_G++;
   tab[countAddElement].id=id_G;
   printf("Your id is:%d\n",tab[countAddElement].id);
@@ -206,7 +206,7 @@ int main()
           }
           for (int showListCount= 0; showListCount < countAddElement; showListCount++)
           {
-            printf("Id est:%d\n",tab[showListCount].id);
+            printf("Id est : %d\n",tab[showListCount].id);
             printf("Le titre de tache est %s\n",tab[showListCount].title);
             printf("Le description de tache est %s\n",tab[showListCount].description);
             printf("Le deadline de tache est %s\t",tab[showListCount].deadline);
@@ -228,7 +228,7 @@ int main()
           }
           for (int showListCount= 0; showListCount < countAddElement; showListCount++)
           {
-            printf("Id est:%d\n",tab[showListCount].id);
+            printf("Id est : %d\n",tab[showListCount].id);
             printf("Le titre de tache est %s\n",tab[showListCount].title);
             printf("Le description de tache est %s\n",tab[showListCount].description);
             printf("Le deadline de tache est %s\n",tab[showListCount].deadline);
@@ -242,7 +242,7 @@ int main()
           {
               if (tab[showListCount].r_days<4)
               {
-                printf("Id est:%d\n",tab[showListCount].id);
+                printf("Id est : %d\n",tab[showListCount].id);
                 printf("Le titre de tache est %s\n",tab[showListCount].title);
                 printf("Le description de tache est %s\n",tab[showListCount].description);
                 printf("Le deadline de tache est %s\n",tab[showListCount].deadline);
@@ -328,7 +328,7 @@ int main()
         {
           if (tab[countSearch].id==searchID)
           {
-            printf("Id est:%d\n",tab[countSearch].id);
+            printf("Id est : %d\n",tab[countSearch].id);
             printf("Le titre de tache est %s\n",tab[countSearch].title);
             printf("Le description de tache est %s\n",tab[countSearch].description);
             printf("Le deadline de tache est %s\n",tab[countSearch].deadline);
@@ -345,7 +345,7 @@ int main()
         {
           if (strcmp(tab[countSearch].title,searchTitle)==0)
           {
-            printf("Id est:%d\n",tab[countSearch].id);
+            printf("Id est : %d\n",tab[countSearch].id);
             printf("Le titre de tache est %s\n",tab[countSearch].title);
             printf("Le description de tache est %s\n",tab[countSearch].description);
             printf("Le deadline de tache est %s\n",tab[countSearch].deadline);
@@ -357,8 +357,8 @@ int main()
       case 7:
       { 
         int choiceStatistiques;
-        printf("choisir de list que vous voulez:");
         printf("|1|-Afficher le nombre total des tâches.\n|2|-Afficher le nombre de tâches complètes et incomplètes.\n|3|-Afficher le nombre de jours restants jusqu'au délai de chaque tâche.\n");
+        printf("choisir de list que vous voulez:");
         scanf("%d",&choiceStatistiques);
         do
         {
@@ -374,7 +374,6 @@ int main()
             countTaskStart==0;
             for (int countChoiceStatistiques= 0; countChoiceStatistiques < countAddElement; countChoiceStatistiques++)
             {
-              
               if (strcmp(tab[countChoiceStatistiques].status,"Finalisee")==0)
               {
                 countTaskEnded++;
@@ -389,7 +388,7 @@ int main()
           {
           for (int showListCount= 0; showListCount < countAddElement; showListCount++)
             {
-              printf("Id est:%d\n",tab[showListCount].id);
+              printf("Id est : %d\n",tab[showListCount].id);
               printf("Le titre de tache est %s\n",tab[showListCount].title);
               printf("Le description de tache est %s\n",tab[showListCount].description);
               printf("Le deadline de tache est %s\n",tab[showListCount].deadline);
