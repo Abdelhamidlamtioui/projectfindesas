@@ -151,16 +151,15 @@ int main()
   while(1)
   {
     int choisie;
-
-    printf("+++++++++++++Choisie de list suivant:+++++++++++++\n");
-    printf("|1|- Ajouter une nouvelle tâche.\n");
-    printf("|2|- Ajouter plusieurs nouvelles tâches.\n");
-    printf("|3|- Afficher la liste de toutes les tâches\n");
-    printf("|4|- Modifier une tâche\n");
-    printf("|5|- Supprimer une tâche par identifiant\n");
-    printf("|6|- Rechercher les Tâches\n");
-    printf("|7|- Statistiques\n");
-    printf("|0|- Quitter\n");
+    printf("Choisie de list suivant:\n");
+    printf("1- Ajouter une nouvelle tâche.\n");
+    printf("2- Ajouter plusieurs nouvelles tâches.\n");
+    printf("3- Afficher la liste de toutes les tâches\n");
+    printf("4- Modifier une tâche\n");
+    printf("5- Supprimer une tâche par identifiant\n");
+    printf("6- Rechercher les Tâches\n");
+    printf("7- Statistiques\n");
+    printf("0- Quitter\n");
     scanf("%d", &choisie);
     switch(choisie)
     {
@@ -358,7 +357,6 @@ int main()
       { 
         int choiceStatistiques;
         printf("choisir de list que vous voulez:");
-        printf("|1|-Afficher le nombre total des tâches.\n|2|-Afficher le nombre de tâches complètes et incomplètes.\n|3|-Afficher le nombre de jours restants jusqu'au délai de chaque tâche.\n");
         scanf("%d",&choiceStatistiques);
         do
         {
